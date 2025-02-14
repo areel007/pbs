@@ -1,7 +1,6 @@
 import { NewsCard } from "../components/NewsCard";
 
 // images
-import Financial from "../../public/assets/images/financial-services.webp"
 
 export default function Home() {
   return (
