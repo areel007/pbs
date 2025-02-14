@@ -1,3 +1,8 @@
+import { NewsCard } from "../components/NewsCard";
+
+// images
+import Financial from "../../public/assets/images/financial-services.webp"
+
 export default function Home() {
   return (
     <div className="">
@@ -27,13 +32,15 @@ export default function Home() {
       <section className="py-[20px] md:py-[60px]">
         <span className="block text-center mb-[20px] text-[20px] md:text-[24px] text-[#cd3037]">WTS Global</span>
         <div className="max-w-[1100px] w-[95%] mx-auto">
-          <div className="grid grid-cols-3 gap-[20px]">
-            <div className="h-[477px] w-full bg-zinc-100"></div>
-            <div className="h-[477px] w-full bg-zinc-100"></div>
-            <div className="h-[477px] w-full bg-zinc-100"></div>
-            <div className="h-[477px] w-full bg-zinc-100"></div>
-            <div className="h-[477px] w-full bg-zinc-100"></div>
-            <div className="h-[477px] w-full bg-zinc-100"></div>
+
+          <div className="global__news">
+            <NewsCard title="WTS Global Financial Services" description="News on tax development" img="/assets/images/financial-services.webp" url="/" />
+            <NewsCard title="WTS Global Financial Services" description="News on tax development" img="/assets/images/financial-services.webp" url="/" />
+            <NewsCard title="WTS Global Financial Services" description="News on tax development" img="/assets/images/financial-services.webp" url="/" />
+            <NewsCard title="WTS Global Financial Services" description="News on tax development" img="/assets/images/financial-services.webp" url="/" />
+            <NewsCard title="WTS Global Financial Services" description="News on tax development" img="/assets/images/financial-services.webp" url="/" />
+            <NewsCard title="WTS Global Financial Services" description="News on tax development" img="/assets/images/financial-services.webp" url="/" />
+
           </div>
         </div>
       </section>

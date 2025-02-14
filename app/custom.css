@@ -1,0 +1,92 @@
+/* Add these styles to your global styles (like in `styles/globals.css` or any custom CSS file) */
+
+.news-card {
+  transition: all 0.3s ease-in-out;
+  height: 477px;
+}
+
+.news-card:hover .front {
+  opacity: 0;
+}
+
+.news-card:hover .back {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.front {
+  transition: opacity 0.3s ease-in-out;
+  height: 100%;
+}
+
+.back {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust for desired overlay color */
+}
+
+.back-content {
+  opacity: 1;
+}
+
+.global__news {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .news-card {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .news-card {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .news-card {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .news-card {
+    height: 380px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .global__news {
+    gap: 10px;
+  }
+  .news-card {
+    height: 360px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .global__news {
+    grid-template-columns: 1fr 1fr;
+  }
+  .news-card {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .global__news {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .news-card {
+    height: 477px;
+  }
+}
