@@ -14,7 +14,7 @@ export const MobileMenu = () => {
         setSubmenu(item)
     }
 
-    return <nav className="bg-zinc-50 text-[14px] text-zinc-800">
+    return <nav className="bg-zinc-50 text-[14px] text-zinc-800 fixed left-0 top-[52px] w-full">
         {step === 0 ? <ul>
             {menuItems.map((item, index) => {
                 return <li key={index} className="flex justify-between items-center border-b border-zinc-200 p-[10px_0_10px_10px]">

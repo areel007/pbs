@@ -47,7 +47,7 @@ export const Header = () => {
 
 
     return (
-        <header className="bg-white py-[10px] sticky top-0 md:top-[-40px] z-50">
+        <header className="bg-white py-[10px] fixed md:sticky top-0 md:top-[-40px] z-50 w-full">
             <div className="w-[95%] mx-auto max-w-[1900px] mb-[10px] hidden md:block">
                 <div className="flex justify-end items-center gap-[30px]">
 
