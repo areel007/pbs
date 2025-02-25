@@ -103,7 +103,7 @@ export const CircleWithLines = () => {
                 </div>
             </div>
 
-            <p className='text-center w-[90%]'>We are represented in more than 100 countries through our own "WTS Global" network, which is coordinated by WTS Germany.</p>
+            <p className='text-center w-[90%]'>We are represented in more than 100 countries through our own &quot;WTS Global&quot; network, which is coordinated by WTS Germany.</p>
 
             <div className="w-[1px] h-[150px] bg-zinc-400 relative">
                 <div className="absolute p-[10px_20px] bg-red-500 text-white top-[60%] -translate-y-1/2 left-1/2 -translate-x-1/2 whitespace-nowrap">Tax-focussed</div>

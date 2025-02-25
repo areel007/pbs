@@ -53,6 +53,7 @@ const OurCEO = () => {
             </section>
 
             <section>
+                <h3 className="text-center text-[26px] font-[300] mb-[20px] md:mb-[40px]">More about PBS Global</h3>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-[10px] md:gap-[30px]">
                     <div className="bg-zinc-200 relative" style={{ height: `${imageHeight - 22.5}px` }}>
                         <div className="absolute left-0 top-[65%] md:-translate-y-[65%] bg-black p-[10px] text-white max-w-[80%] text-[22px] font-[600]">
