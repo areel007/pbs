@@ -3,8 +3,8 @@ import { PBSLogo } from "./Logo"
 
 export const Footer = () => {
     return (
-        <footer className="py-[20px]md:py-[40px] lg:py-[60px] bg-zinc-100">
-            <div className="w-[95%] mx-auto max-w-[1900px] mb-[10px] hidden md:block">
+        <footer className="py-[20px] md:py-[40px] lg:py-[60px] bg-zinc-100">
+            <div className="w-[95%] mx-auto max-w-[1900px] mb-[10px]">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] md:gap-[60px]">
                     <div className="">
                         <PBSLogo />

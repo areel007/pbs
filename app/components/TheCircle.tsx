@@ -90,85 +90,45 @@ export const CircularMenu = () => {
 };
 
 export const CircleWithLines = () => {
-    const items = [
-        {
-            title: "Feature 1",
-            description: "This is a detailed explanation about Feature 1. It provides valuable information about the functionality."
-        },
-        {
-            title: "Feature 2",
-            description: "Here's what you need to know about Feature 2. It contains important details about this aspect."
-        },
-        {
-            title: "Feature 3",
-            description: "Feature 3 is explained here with all its important characteristics and benefits."
-        },
-        {
-            title: "Feature 4",
-            description: "Let's explore Feature 4 and understand its significance in the overall system."
-        }
-    ];
+
 
     return (
-        <div className="relative flex justify-center mt-[40px]">
-            {/* Circle with center text */}
-            <div className="relative w-[250px] h-[250px] rounded-full border-[1px] border-zinc-500 flex items-center justify-center">
-                <span className="text-2xl font-bold text-zinc-500">Center Text</span>
-
-                <div className="absolute flex justify-between">
-                    <div className="relative flex flex-col items-center">
-                        <div className="absolute bottom-[-240px] w-[1px] h-[150px] bg-zinc-500">
-                            <div className="absolute bg-red-500 p-[10px_20px] text-center w-[min-content] translate-x-[-50%] left-[50%] translate-y-[-20%] top-[50%]">
-                                <span className="font-semibold text-white text-[20px]">Global</span>
-                            </div>
-
-                            <p className='absolute top-[110%] w-[90vw] left-[50%] translate-x-[-50%] text-center'>
-                                We are represented in more than 100 countries through our own "WTS Global" network, which is coordinated by WTS Germany.
-                            </p>
-
-                            <div className="absolute bottom-[-240px] w-[1px] h-[150px] bg-zinc-500">
-                                <div className="absolute bg-red-500 p-[10px_20px] text-center w-[min-content] whitespace-nowrap translate-x-[-50%] left-[50%] translate-y-[-20%] top-[50%]">
-                                    <span className="font-semibold text-white text-[20px]">Tax-focussed</span>
-                                </div>
-
-                                <p className='absolute top-[110%] w-[90vw] left-[50%] translate-x-[-50%] text-center'>
-                                    We have a clear tax focus and offer a fully-fledged tax service portfolio.
-                                    To round our services we offer adjoining legal and financial advisory service.
-                                </p>
-
-                                <div className="absolute bottom-[-260px] w-[1px] h-[150px] bg-zinc-500">
-                                    <div className="absolute bg-red-500 p-[10px_20px] text-center w-[min-content] whitespace-nowrap translate-x-[-50%] left-[50%] translate-y-[-20%] top-[50%]">
-                                        <span className="font-semibold text-white text-[20px]">Free Conflict</span>
-                                    </div>
-
-                                    <p className='absolute top-[110%] w-[90vw] left-[50%] translate-x-[-50%] text-center'>
-                                        We deliberately refrain from conducting annual audits in order to avoid potential conflicts of interest.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-
-
-                    </div>
-
-
-
+        <div className="flex flex-col items-center gap-[10px]">
+            <div className="relative flex flex-col items-center">
+                <div className="w-[200px] h-[200px] border border-zinc-400 rounded-full flex justify-center items-center">
+                    <span>PBS Global</span>
                 </div>
-
-
-
-
+                <div className="w-[1px] h-[150px] bg-zinc-400 mt-[-30px] relative">
+                    <div className="absolute p-[10px_20px] bg-red-500 text-white top-[60%] -translate-y-1/2 left-1/2 -translate-x-1/2">Global</div>
+                </div>
             </div>
 
+            <p className='text-center w-[90%]'>We are represented in more than 100 countries through our own "WTS Global" network, which is coordinated by WTS Germany.</p>
 
+            <div className="w-[1px] h-[150px] bg-zinc-400 relative">
+                <div className="absolute p-[10px_20px] bg-red-500 text-white top-[60%] -translate-y-1/2 left-1/2 -translate-x-1/2 whitespace-nowrap">Tax-focussed</div>
+            </div>
 
-            {/* Container for lines and content */}
+            <p className='text-center w-[90%]'>
+                We have a clear tax focus and offer a fully-fledged tax service portfolio.
+                To round our services we offer adjoining legal and financial advisory service.
+            </p>
 
+            <div className="w-[1px] h-[150px] bg-zinc-400 relative">
+                <div className="absolute p-[10px_20px] bg-red-500 text-white top-[60%] -translate-y-1/2 left-1/2 -translate-x-1/2 whitespace-nowrap">Free Conflict</div>
+            </div>
+
+            <p className='text-center w-[90%]'>
+                We deliberately refrain from conducting annual audits in order to avoid potential conflicts of interest.
+            </p>
+
+            <div className="w-[1px] h-[150px] bg-zinc-400 relative">
+                <div className="absolute p-[10px_20px] bg-red-500 text-white top-[60%] -translate-y-1/2 left-1/2 -translate-x-1/2 whitespace-nowrap">Innovative</div>
+            </div>
+
+            <p className='text-center w-[90%]'>
+                We offer innovative and customised solutions and stand for high implementation competency. It is our aspiration to be reliable business partner.
+            </p>
         </div>
     );
 };

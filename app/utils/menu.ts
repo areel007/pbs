@@ -11,7 +11,8 @@ export const menuItems: MenuItem[] = [
     url: "/about-us",
     submenu: [
       { name: "About us", url: "/about-us" },
-      { name: "Our Partners", url: "/our-partners" },
+      { name: "Our CEO", url: "/about-us/our-ceo" },
+      { name: "Our Supervisory Board", url: "/our-supervisory-board" },
     ],
     description:
       "We are a global network of independent professional services firms providing audit, tax and advisory services.",

@@ -2,10 +2,11 @@
 
 import Link from "next/link"
 import { PBSLogo } from "./Logo"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { MobileMenu } from "./Mobile.Menu"
 import { menuItems } from "../utils/menu"
 import { Submenu } from "../utils/type"
+import { useRouter, usePathname } from "next/navigation"
 
 
 export const Header = () => {
@@ -21,6 +22,10 @@ export const Header = () => {
     const [menuUrl, setMenuUrl] = useState('')
 
     const [description, setDescription] = useState<undefined | string>(undefined)
+
+    const router = useRouter()
+
+    const pathname = usePathname()
 
 
     // methods: handleMouseEnter, handleMouseLeave, handleMobileMenuClick
@@ -38,16 +43,27 @@ export const Header = () => {
         setSubmenu(undefined)
         setMenuCount(null)
         setDescription(undefined)
+        setMenuName('')
+        setMenuUrl('')
     }
 
     const handleMobileMenuClick = () => {
         setIsMobileMenuOut(!isMobileMenuOut)
     }
 
+    const handleNavigateToPage = (url: string) => {
+        router.push(url)
+        handleMouseLeave()
+    }
+
+    useEffect(() => {
+
+    }, []);
+
 
 
     return (
-        <header className="bg-white py-[10px] fixed md:sticky top-0 md:top-[-40px] z-50 w-full">
+        <header className="bg-white py-[10px] fixed md:sticky top-0 md:top-[-40px] z-50 w-full shadow">
             <div className="w-[95%] mx-auto max-w-[1900px] mb-[10px] hidden md:block">
                 <div className="flex justify-end items-center gap-[30px]">
 
@@ -75,14 +91,14 @@ export const Header = () => {
                     <PBSLogo />
                     <nav className="hidden md:flex items-center gap-[0px]">
                         {menuItems.map((item, index) => {
-                            return <Link href={item.url} key={index} className={`text-zinc-800 text-[14px] uppercase h-[100%] flex items-center p-[10px_20px] ${index === menuCount ? 'bg-zinc-100 font-[500]' : 'bg-white font-[400]'}`} onMouseEnter={() => handleMouseEnter(item.submenu, index, item.description, item.name, item.url)}>
+                            return <div key={index} onClick={() => handleNavigateToPage(item.url)} className={`cursor-pointer text-[14px] uppercase h-[100%] flex items-center p-[10px_20px] ${index === menuCount ? 'bg-zinc-100 font-[500]' : 'bg-white font-[400]'} ${pathname.includes(item.url) ? 'font-[500] text-[#cd3037]' : 'text-zinc-800'}`} onMouseEnter={() => handleMouseEnter(item.submenu, index, item.description, item.name, item.url)}>
                                 {item.name}
-                            </Link>
+                            </div>
                         })}
 
                     </nav>
 
-                    <Link href="/search" className="hidden md:block">
+                    <Link href="/search" className="hidden md:block" onClick={() => window.location.href = '/search'}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                         </svg>
@@ -98,6 +114,7 @@ export const Header = () => {
 
                     </div>
                 </div>
+
                 {submenu && <div className="p-[40px] bg-zinc-50">
                     <div className="w-[80%] mx-auto max-w-[1900px]">
                         <span className="uppercase text-[18px] font-[500] text-[#cd3037] inline-block mb-[20px]">{menuName}</span>
@@ -107,14 +124,17 @@ export const Header = () => {
                                     {description}
                                 </span>
 
-                                <Link href={menuUrl} className="bg-[#cd3037] text-white text-[14px] py-[10px] px-[20px] inline-block">
+                                <div className="bg-[#cd3037] text-white text-[14px] py-[10px] px-[20px] inline-block cursor-pointer" onClick={() => handleNavigateToPage(menuUrl)}>
                                     Read more
-                                </Link>
+                                </div>
                             </div>
 
                             <ul className="">
                                 {submenu.map((item, index) => {
-                                    return <li key={index}>{item.name}</li>
+                                    return <li key={index} onClick={() => handleNavigateToPage(item.url)} className="cursor-pointer flex items-center gap-[10px] text-[14px] font-[300] group">
+                                        <span className="text-[#cd3037]">&gt;</span>
+                                        <span className={`group-hover:underline ${item.url === location.pathname ? 'font-[500] text-[#cd3037]' : ''}`}>{item.name}</span>
+                                    </li>
                                 })}
                             </ul>
                         </div>
