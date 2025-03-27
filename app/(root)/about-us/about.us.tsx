@@ -32,7 +32,7 @@ const AboutUs = () => {
                 <div className="max-w-[1200px] w-[90%] mx-auto flex flex-col gap-[60px]">
                     <span className="text-white text-[14px]">About</span>
 
-                    <p className="text-[40px] leading-[1.2] text-white">We are Locally rooted - Globally connected</p>
+                    <p className="text-[36px] md:text-[40px] leading-[1.2] text-white">We are Locally rooted - Globally connected</p>
                 </div>
             </section>
 

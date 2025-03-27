@@ -7,50 +7,71 @@ type MenuItem = {
 
 export const menuItems: MenuItem[] = [
   {
+    name: "Home",
+    url: "/",
+  },
+  {
     name: "About Us",
     url: "/about-us",
+  },
+  {
+    name: "Corporate Design",
+    url: "/corporate-design",
     submenu: [
-      { name: "About us", url: "/about-us" },
-      { name: "Our CEO", url: "/about-us/our-ceo" },
-      { name: "Our Supervisory Board", url: "/our-supervisory-board" },
+      { name: "Logo & Label", url: "/logo-and-label" },
+      { name: "Colors", url: "/colors" },
+      { name: "Fonts & Typography", url: "/fonts-and-typography" },
+      { name: "Brand Element", url: "/brand-elements" },
     ],
     description:
       "We are a global network of independent professional services firms providing audit, tax and advisory services.",
   },
   {
-    name: "Services",
-    url: "/services",
+    name: "Templates",
+    url: "/templates",
     submenu: [
-      { name: "Services", url: "/services" },
-      { name: "Our Partners", url: "/our-partners" },
+      {
+        name: "Publc & Communication Templates",
+        url: "/templates/public-and-communication-templates",
+      },
+      {
+        name: "Pitch & Presentation Templates",
+        url: "/templates/pitch-and-presentation-templates",
+      },
+    ],
+    description:
+      "We are a global network of independent professional services firms providing audit, tax and advisory services.",
+  },
+
+  {
+    name: "Image World",
+    url: "/image-world",
+    submenu: [
+      { name: "Image Pool", url: "/image-pool" },
+      { name: "Visual World", url: "/visual-world" },
     ],
     description:
       "We are a global network of independent professional services firms providing audit, tax and advisory services.",
   },
   {
-    name: "Experts",
-    url: "/experts",
-  },
-  {
-    name: "News & Knowledge",
-    url: "/news-and-knowledge",
-  },
-  {
-    name: "Hot Topics",
-    url: "/hot-topics",
+    name: "Online Solutions",
+    url: "/online-solutions",
     submenu: [
-      { name: "Pillar Two", url: "/pillar-two" },
-      { name: "Our Partners", url: "/our-partners" },
+      { name: "Web frame", url: "/image-pool" },
+      { name: "Social media", url: "/visual-world" },
+      { name: "E-mailing", url: "/visual-world" },
+      { name: "Virtual Background", url: "/visual-world" },
+      { name: "Icons", url: "/visual-world" },
     ],
     description:
       "We are a global network of independent professional services firms providing audit, tax and advisory services.",
   },
   {
-    name: "Culture & Career",
-    url: "/culture-and-career",
-  },
-  {
-    name: "Locations",
+    name: "Brand Trainings",
     url: "/locations",
+  },
+  {
+    name: "Employer Branding",
+    url: "/employer-branding",
   },
 ];
