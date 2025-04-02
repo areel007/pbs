@@ -1,6 +1,6 @@
 "use client"
 
-import { CircularMenu, CircleWithLines } from "@/app/components/TheCircle"
+// import { CircularMenu, CircleWithLines } from "@/app/components/TheCircle"
 import { useState, useEffect } from "react"
 
 const AboutUs = () => {
@@ -13,6 +13,9 @@ const AboutUs = () => {
             setScreenWidth(window.innerWidth)
         })
     }
+
+    console.log(imageHeight);
+    
 
     useEffect(() => {
         setScreenWidth(window.innerWidth)

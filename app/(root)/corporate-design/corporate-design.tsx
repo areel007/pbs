@@ -7,28 +7,28 @@ import AboutImage from "@/public/assets/images/wtsglobal-key-visual-istock-13684
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 
-const menuCards = [
-    {
-        title: 'About PBS Global',
-        image: AboutImage,
-        href: '/about-us',
-    },
-    {
-        title: 'Corporate Design',
-        image: AboutImage,
-        href: '/',
-    },
-    {
-        title: 'Templates',
-        image: AboutImage,
-        href: '/',
-    },
-    {
-        title: 'Online Solutions',
-        image: AboutImage,
-        href: '/',
-    },
-]
+// const menuCards = [
+//     {
+//         title: 'About PBS Global',
+//         image: AboutImage,
+//         href: '/about-us',
+//     },
+//     {
+//         title: 'Corporate Design',
+//         image: AboutImage,
+//         href: '/',
+//     },
+//     {
+//         title: 'Templates',
+//         image: AboutImage,
+//         href: '/',
+//     },
+//     {
+//         title: 'Online Solutions',
+//         image: AboutImage,
+//         href: '/',
+//     },
+// ]
 
 export default function CorporateDesign() {
     const [gridColumns, setGridColumns] = useState(2);

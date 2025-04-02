@@ -30,7 +30,7 @@ export default function BrandElement() {
 
                 <div className="flex flex-col justify-center items-center">
                     <Image src={donts} alt="pbs global" width={100} />
-                    <span className="font-[600] text-zinc-700">Don'ts</span>
+                    <span className="font-[600] text-zinc-700">Don&apos;ts</span>
                 </div>
             </div>
 

@@ -84,7 +84,7 @@ export default function LogoAndLabel() {
             <div className="max-w-[1200px] w-[90%] mx-auto grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-[40px]">
                 <div className="">
                     <div className="mb-[10px]">
-                        <h3 className="font-[600] text-[22px] md:text-[26px] inline-block">The "Olympic minimum"</h3>
+                        <h3 className="font-[600] text-[22px] md:text-[26px] inline-block">The &quot;Olympic minimum&quot;</h3>
                     </div>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui laboriosam culpa eveniet magni, incidunt deleniti nam dolor? Molestias dignissimos consequuntur porro fugiat reprehenderit ipsa, eligendi ipsam quos fuga eos dicta commodi veniam voluptate nulla aperiam blanditiis! Aperiam doloremque dolores, aspernatur necessitatibus porro molestiae deleniti harum asperiores quo nobis quasi totam. <br /><br />Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, quisquam commodi quidem repellat reiciendis necessitatibus exercitationem doloremque vitae reprehenderit maiores architecto molestiae veniam hic odio! <br /><br />
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. In sequi quos incidunt nam sint, magnam quae qui dolor nisi quasi possimus dolorum et doloribus? Cupiditate dicta debitis veniam omnis vel.
