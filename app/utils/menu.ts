@@ -18,10 +18,13 @@ export const menuItems: MenuItem[] = [
     name: "Corporate Design",
     url: "/corporate-design",
     submenu: [
-      { name: "Logo & Label", url: "/logo-and-label" },
-      { name: "Colors", url: "/colors" },
-      { name: "Fonts & Typography", url: "/fonts-and-typography" },
-      { name: "Brand Element", url: "/brand-elements" },
+      { name: "Logo & Label", url: "/corporate-design/logo-&-label" },
+      { name: "Colors", url: "/corporate-design/colors" },
+      {
+        name: "Font & Typography",
+        url: "/corporate-design/font-&-typography",
+      },
+      { name: "Brand Element", url: "/corporate-design/brand-elements" },
     ],
     description:
       "We are a global network of independent professional services firms providing audit, tax and advisory services.",

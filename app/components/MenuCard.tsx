@@ -12,7 +12,7 @@ interface IMenuCardProps {
 export const MenuCard = ({ title, image, href, height, width }: IMenuCardProps) => {
     return (
         <Link href={href}
-            className="w-full bg-zinc-200 relative group cursor-pointer overflow-hidden border"
+            className="w-full relative group cursor-pointer overflow-hidden border"
             style={{ height: `${height}px`, width: `${width}px`, }}
         >
             {/* Front Side */}

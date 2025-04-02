@@ -10,12 +10,12 @@ const menuCards = [
   {
     title: 'About PBS Global',
     image: AboutImage,
-    href: '/',
+    href: '/about-us',
   },
   {
     title: 'Corporate Design',
     image: AboutImage,
-    href: '/',
+    href: '/corporate-design',
   },
   {
     title: 'Templates',

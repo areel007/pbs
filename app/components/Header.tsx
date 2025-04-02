@@ -57,6 +57,7 @@ export const Header = () => {
     }
 
     useEffect(() => {
+        console.log(pathname.includes('/about-us'.slice(1, -1)));
 
     }, []);
 
@@ -70,8 +71,6 @@ export const Header = () => {
 
                     <Link href="/press" className="text-[#cd3037] text-[14px] hover:underline">PBS Worldwide</Link>
                 </div>
-
-
             </div>
 
             <div className="relative" onMouseLeave={() => handleMouseLeave()}>
@@ -79,7 +78,7 @@ export const Header = () => {
                     <PBSLogo />
                     <nav className="hidden lg:flex items-center gap-[0px]">
                         {menuItems.map((item, index) => {
-                            return <div key={index} onClick={() => handleNavigateToPage(item.url)} className={`cursor-pointer text-[14px] uppercase h-[100%] flex items-center p-[10px_20px] ${index === menuCount ? 'bg-zinc-100 font-[500]' : 'bg-white font-[400]'} ${pathname.includes(item.url) ? 'font-[500] text-[#cd3037]' : 'text-zinc-800'}`} onMouseEnter={() => handleMouseEnter(item.submenu, index, item.description, item.name, item.url)}>
+                            return <div key={index} onClick={() => handleNavigateToPage(item.url)} className={`cursor-pointer text-[14px] uppercase h-[100%] flex items-center p-[10px_20px] ${index === menuCount ? 'bg-zinc-100 font-[500]' : 'bg-white font-[400]'} ${pathname === item.url ? 'font-[500] text-[#cd3037]' : 'text-zinc-800'}`} onMouseEnter={() => handleMouseEnter(item.submenu, index, item.description, item.name, item.url)}>
                                 {item.name}
                             </div>
                         })}
@@ -97,28 +96,30 @@ export const Header = () => {
                     </div>
                 </div>
 
-                {submenu && <div className="p-[40px] bg-zinc-50">
-                    <div className="w-[80%] mx-auto max-w-[1900px]">
-                        <span className="uppercase text-[18px] font-[500] text-[#cd3037] inline-block mb-[20px]">{menuName}</span>
-                        <div className="grid grid-cols-[300px_1fr]">
-                            <div>
-                                <span className="text-zinc-700 text-[14px] leading-[1.6] inline-block mb-[10px]">
-                                    {description}
-                                </span>
+                {submenu && <div className="">
+                    <div className="mt-[10px] bg-zinc-50 p-[40px]">
+                        <div className="w-[80%] mx-auto max-w-[1900px]">
+                            <span className="uppercase text-[18px] font-[500] text-[#cd3037] inline-block mb-[20px]">{menuName}</span>
+                            <div className="grid grid-cols-[300px_1fr]">
+                                <div>
+                                    <span className="text-zinc-700 text-[14px] leading-[1.6] inline-block mb-[10px]">
+                                        {description}
+                                    </span>
 
-                                <div className="bg-[#cd3037] text-white text-[14px] py-[10px] px-[20px] inline-block cursor-pointer" onClick={() => handleNavigateToPage(menuUrl)}>
-                                    Read more
+                                    <div className="bg-[#cd3037] text-white text-[14px] py-[10px] px-[20px] inline-block cursor-pointer" onClick={() => handleNavigateToPage(menuUrl)}>
+                                        Read more
+                                    </div>
                                 </div>
-                            </div>
 
-                            <ul className="">
-                                {submenu.map((item, index) => {
-                                    return <li key={index} onClick={() => handleNavigateToPage(item.url)} className="cursor-pointer flex items-center gap-[10px] text-[14px] font-[300] group">
-                                        <span className="text-[#cd3037]">&gt;</span>
-                                        <span className={`group-hover:underline ${item.url === location.pathname ? 'font-[500] text-[#cd3037]' : ''}`}>{item.name}</span>
-                                    </li>
-                                })}
-                            </ul>
+                                <ul className="">
+                                    {submenu.map((item, index) => {
+                                        return <li key={index} onClick={() => handleNavigateToPage(item.url)} className="cursor-pointer flex items-center gap-[10px] text-[14px] font-[300] group">
+                                            <span className="text-[#cd3037]">&gt;</span>
+                                            <span className={`group-hover:underline ${item.url === location.pathname ? 'font-[500] text-[#cd3037]' : ''}`}>{item.name}</span>
+                                        </li>
+                                    })}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>}
